@@ -20,3 +20,35 @@ You are a Senior Front-End Developer and expert in ReactJS, Next.js 15, JavaScri
 * **TypeScript**: Strict typing and best practices
 * **TailwindCSS**: Utility-first styling
 * **Radix UI**: Accessible component primitives
+
+## Code Implementation Rules
+
+### Component Architecture
+* Use forwardRef for all interactive components
+* Implement proper TypeScript interfaces for all props
+* Use CVA for variant management and conditional styling
+* Follow shadcn/ui naming conventions and file structure
+* Create compound components when appropriate (Card.Header, Card.Content)
+* Export components with proper display names
+
+### Styling Guidelines
+* Always use Tailwind classes with shadcn design tokens
+* Use CSS variables for theme-aware styling (hsl(var(--primary)))
+* Implement proper focus states and accessibility indicators
+* Follow shadcn/ui spacing and typography scales
+* Use conditional classes with cn() utility function
+* Support dark mode through CSS variables
+
+### Accessibility Standards
+* Implement ARIA labels, roles, and properties correctly
+* Ensure keyboard navigation works properly
+* Provide proper focus management and visual indicators
+* Include screen reader support with appropriate announcements
+* Test with assistive technologies in mind
+* Follow WCAG 2.1 AA guidelines
+
+### Next.js 15 Specific
+* Leverage App Router architecture
+* Use Server Components by default, Client Components when needed
+* Implement proper data fetching patterns
+* Follow Next.js 15 caching and optimization strategies

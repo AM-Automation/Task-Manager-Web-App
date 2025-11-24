@@ -18,28 +18,35 @@
 
 ## Phase 2: Core Architecture & Design System
 - [ ] **Design System Implementation**
-    - [ ] Install and configure `shadcn/ui` base components
-    - [ ] Define global color palette and typography in `globals.css`
-    - [ ] Implement responsive layout wrapper
+    - [x] Install and configure `shadcn/ui` base components
+    - [x] Define global color palette and typography in `globals.css`
+    - [x] Implement responsive layout wrapper
 - [ ] **Authentication & Security**
-    - [ ] Setup Supabase client
-    - [ ] Implement secure authentication flow (Login/Register)
-    - [ ] Configure protected routes middleware
+    - [x] Setup Supabase client
+    - [x] Implement secure authentication flow (Login/Register)
+    - [x] Configure protected routes middleware
 
 ## Phase 3: Feature Development
 - [ ] **Task Management Module**
-    - [ ] Create Task data model (Schema)
-    - [ ] Implement CRUD operations (Server Actions)
-    - [ ] Develop Task List UI with filtering and sorting
-    - [ ] Build Task Detail view with editing capabilities
+    - [x] Create Task data model (Schema & Types)
+    - [x] Implement CRUD operations (Server Actions)
+    - [x] Develop Task List UI with filtering and sorting
+    - [x] Build Task Detail view with editing capabilities
 - [ ] **AI Integration**
     - [ ] Implement AI-powered task suggestions
     - [ ] Integrate natural language processing for task creation
 
 ## Phase 4: Quality Assurance & Optimization
-- [ ] **Testing**
-    - [ ] Unit testing for utility functions
-    - [ ] Component testing for critical UI elements
+- [ ] **Testing & Quality Gates**
+    - [ ] **Unit Testing**
+        - [ ] Test utility functions with Jest/Vitest
+        - [ ] Verify Server Actions error handling
+    - [ ] **Component Testing**
+        - [ ] Verify ARIA labels and roles (Accessibility)
+        - [ ] Test keyboard navigation and focus states
+        - [ ] Validate CVA variant rendering
+    - [ ] **Integration Testing**
+        - [ ] Test full user flows (Auth -> Task Creation)
 - [ ] **Performance Tuning**
     - [ ] Optimize image assets and fonts
     - [ ] Analyze bundle size and lazy loading opportunities
@@ -55,3 +62,27 @@
 ---
 **Legend:**
 `[ ]` Pending | `[/]` In Progress | `[x]` Completed
+public enum TaskStatus {
+    TODO,
+    IN_PROGRESS,
+    DONE
+}
+
+@Entity
+public class Task {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @NotBlank
+    @Size(max = 100)
+    private String title;
+
+    @Size(max = 500)
+    private String description;
+
+    @Enumerated(EnumType.STRING)
+    private TaskStatus status;
+
+    private LocalDate dueDate;
+}
