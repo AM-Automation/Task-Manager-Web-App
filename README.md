@@ -2,129 +2,129 @@
 
 > **Live Demo:** [https://task-manager-web-app-delta.vercel.app](https://task-manager-web-app-delta.vercel.app)
 
-Eine moderne, full-stack Task-Management-Anwendung mit Kanban-Board, gebaut mit Next.js 15 und Supabase.
+A modern, full-stack task management application with Kanban board functionality, built with Next.js 15 and Supabase.
 
 ---
 
-## 📋 Projektübersicht
+## 📋 Project Overview
 
-Dieses Projekt ist eine vollständig funktionale Task-Management-Webanwendung, die es Benutzern ermöglicht, ihre Aufgaben effizient zu organisieren und zu verwalten. Die App bietet eine intuitive Kanban-Board-Oberfläche mit Drag-and-Drop-Funktionalität und sichere Benutzer-Authentifizierung.
+This project is a fully functional task management web application that enables users to efficiently organize and manage their tasks. The app provides an intuitive Kanban board interface with drag-and-drop functionality and secure user authentication.
 
-**Hauptfunktionen:**
-- ✅ Benutzer-Registrierung und Login (Supabase Auth)
-- 📋 Kanban-Board mit drei Spalten (To Do, In Progress, Done)
-- 🔄 Drag & Drop zum Verschieben von Tasks zwischen Spalten
-- ➕ Erstellen neuer Tasks mit Titel, Beschreibung und Fälligkeitsdatum
-- ✏️ Bearbeiten und Löschen bestehender Tasks
-- 📊 Detailansicht für jeden Task
-- 🔒 Row Level Security (RLS) - Benutzer sehen nur ihre eigenen Tasks
-- 📱 Vollständig responsive für Desktop und Mobile
+**Key Features:**
+- ✅ User registration and login (Supabase Auth)
+- 📋 Kanban board with three columns (To Do, In Progress, Done)
+- 🔄 Drag & drop to move tasks between columns
+- ➕ Create new tasks with title, description, and due date
+- ✏️ Edit and delete existing tasks
+- 📊 Detailed view for each task
+- 🔒 Row Level Security (RLS) - users only see their own tasks
+- 📱 Fully responsive for desktop and mobile
 
 ---
 
-## � Tech Stack
+## 🚀 Tech Stack
 
 ### Frontend
-- **[Next.js 15](https://nextjs.org/)** - React Framework mit App Router und Server Actions
-- **[React 19](https://react.dev/)** - UI-Bibliothek
-- **[TypeScript](https://www.typescriptlang.org/)** - Type-Safe JavaScript
-- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-First CSS Framework
-- **[shadcn/ui](https://ui.shadcn.com/)** - Komponenten-Bibliothek (Radix UI + Tailwind)
-- **[DND Kit](https://dndkit.com/)** - Moderne Drag-and-Drop-Bibliothek
+- **[Next.js 15](https://nextjs.org/)** - React framework with App Router and Server Actions
+- **[React 19](https://react.dev/)** - UI library
+- **[TypeScript](https://www.typescriptlang.org/)** - Type-safe JavaScript
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[shadcn/ui](https://ui.shadcn.com/)** - Component library (Radix UI + Tailwind)
+- **[DND Kit](https://dndkit.com/)** - Modern drag-and-drop library
 
 ### Backend & Database
 - **[Supabase](https://supabase.com/)** - Backend-as-a-Service (PostgreSQL, Auth, Storage)
-- **[Next.js Server Actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations)** - Server-seitige Datenmutationen
-- **[Zod](https://zod.dev/)** - Schema-Validierung
+- **[Next.js Server Actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations)** - Server-side data mutations
+- **[Zod](https://zod.dev/)** - Schema validation
 
 ### Deployment & DevOps
-- **[Vercel](https://vercel.com/)** - Hosting-Platform mit CI/CD
-- **[GitHub](https://github.com/)** - Version Control & Repository
+- **[Vercel](https://vercel.com/)** - Hosting platform with CI/CD
+- **[GitHub](https://github.com/)** - Version control & repository
 
 ---
 
-## 🎨 Features im Detail
+## 🎨 Features in Detail
 
 ### 1. Authentication System
-- Email/Password-Authentifizierung via Supabase
-- Email-Verifizierung bei der Registrierung
-- Sichere Session-Verwaltung
-- Automatische Weiterleitung für geschützte Routen
+- Email/Password authentication via Supabase
+- Email verification during registration
+- Secure session management
+- Automatic redirection for protected routes
 
 ### 2. Kanban Board
-- **Kompakte Card-Ansicht:** Nur Titel, Status-Badge und Datum sichtbar
-- **Schnelles Drag & Drop:** 3px Aktivierungsdistanz für responsives Feedback
-- **Drei Spalten:** To Do, In Progress, Done
-- **Automatisches Status-Update:** Status ändert sich beim Verschieben der Card
+- **Compact card view:** Only title, status badge, and date visible
+- **Fast drag & drop:** 3px activation distance for responsive feedback
+- **Three columns:** To Do, In Progress, Done
+- **Automatic status update:** Status changes when card is moved
 
 ### 3. Task Management
-- **Create:** Dialog-basierte Task-Erstellung mit Validierung
-- **Read:** Übersichtliche Liste im Kanban-Board
-- **Update:** Bearbeiten via Edit-Dialog mit vorausgefüllten Feldern
-- **Delete:** One-Click-Löschung mit Bestätigung
+- **Create:** Dialog-based task creation with validation
+- **Read:** Clear overview in Kanban board
+- **Update:** Edit via dialog with pre-filled fields
+- **Delete:** One-click deletion with confirmation
 
 ### 4. Task Detail View
-- Click-to-View: Klick auf eine Card öffnet Detail-Dialog
-- Vollständige Anzeige: Titel, Beschreibung, Status, Fälligkeitsdatum
-- Schneller Zugriff auf Edit/Delete-Funktionen
+- Click-to-view: Click on a card to open detail dialog
+- Complete display: Title, description, status, due date
+- Quick access to edit/delete functions
 
 ---
 
-## 📁 Projektstruktur
+## 📁 Project Structure
 
 ```
 Task-Manager-Web-App/
 ├── src/
 │   ├── app/                    # Next.js App Router
-│   │   ├── auth/              # Authentifizierungs-Routen
-│   │   ├── page.tsx           # Landing Page / Dashboard
-│   │   ├── layout.tsx         # Root Layout
+│   │   ├── auth/              # Authentication routes
+│   │   ├── page.tsx           # Landing page / Dashboard
+│   │   ├── layout.tsx         # Root layout
 │   │   └── actions.ts         # Server Actions (CRUD)
-│   ├── components/            # React Components
-│   │   ├── ui/               # shadcn/ui Basis-Komponenten
-│   │   ├── kanban-board.tsx  # Kanban Board mit DND
-│   │   ├── task-card.tsx     # Task Card (kompakt)
-│   │   └── *-dialog.tsx      # Dialog-Komponenten
-│   ├── lib/                   # Utilities & Config
-│   │   ├── supabase/         # Supabase Client/Server Setup
-│   │   └── schemas.ts        # Zod Validierungs-Schemas
-│   ├── types/                 # TypeScript Typen
-│   └── middleware.ts          # Next.js Middleware (Auth)
-├── public/                    # Static Assets
-├── .env.local                 # Environment Variables (lokal)
+│   ├── components/            # React components
+│   │   ├── ui/               # shadcn/ui base components
+│   │   ├── kanban-board.tsx  # Kanban board with DND
+│   │   ├── task-card.tsx     # Task card (compact)
+│   │   └── *-dialog.tsx      # Dialog components
+│   ├── lib/                   # Utilities & config
+│   │   ├── supabase/         # Supabase client/server setup
+│   │   └── schemas.ts        # Zod validation schemas
+│   ├── types/                 # TypeScript types
+│   └── middleware.ts          # Next.js middleware (Auth)
+├── public/                    # Static assets
+├── .env.local                 # Environment variables (local)
 └── package.json              # Dependencies
 ```
 
 ---
 
-## 🔐 Sicherheit
+## 🔐 Security
 
-- **Row Level Security (RLS):** Supabase-Policies stellen sicher, dass User nur ihre eigenen Tasks sehen
-- **Server-Side Validation:** Alle Datenmutationen werden via Server Actions validiert (Zod)
-- **Environment Variables:** Sensible Daten (API Keys) werden sicher verwaltet
-- **HTTPS:** Alle Verbindungen sind verschlüsselt (Vercel + Supabase)
+- **Row Level Security (RLS):** Supabase policies ensure users only see their own tasks
+- **Server-side validation:** All data mutations validated via Server Actions (Zod)
+- **Environment variables:** Sensitive data (API keys) securely managed
+- **HTTPS:** All connections encrypted (Vercel + Supabase)
 
 ---
 
 ## 🌐 Deployment
 
-Die App ist vollständig deployed und produktionsbereit:
+The app is fully deployed and production-ready:
 
 - **Platform:** Vercel (Serverless)
 - **Domain:** [https://task-manager-web-app-delta.vercel.app](https://task-manager-web-app-delta.vercel.app)
-- **CI/CD:** Automatisches Deployment bei jedem Git Push
+- **CI/CD:** Automatic deployment on every Git push
 - **Database:** Supabase PostgreSQL (Cloud-hosted)
-- **CDN:** Global über Vercel Edge Network
+- **CDN:** Global via Vercel Edge Network
 
-### Deployment-Workflow
-1. Code Push zu GitHub
-2. Vercel Auto-Deploy triggert
-3. Build läuft (~30s)
-4. Automatisches Rollout zur Production-URL
+### Deployment Workflow
+1. Code push to GitHub
+2. Vercel auto-deploy triggers
+3. Build runs (~30s)
+4. Automatic rollout to production URL
 
 ---
 
-## 📊 Datenbank Schema
+## 📊 Database Schema
 
 ### Tasks Table
 ```sql
@@ -146,84 +146,84 @@ CREATE POLICY "Users manage own tasks"
 
 ---
 
-## 🚦 Lokale Entwicklung
+## 🚦 Local Development
 
-### Voraussetzungen
+### Prerequisites
 - Node.js 18+
-- npm oder yarn
-- Supabase Account
+- npm or yarn
+- Supabase account
 
 ### Setup
 ```bash
-# Repository klonen
+# Clone repository
 git clone https://github.com/AM-Automation/Task-Manager-Web-App.git
 cd Task-Manager-Web-App
 
-# Dependencies installieren
+# Install dependencies
 npm install
 
-# Environment Variables setzen
+# Set environment variables
 cp .env.local.example .env.local
-# Füge Supabase Keys in .env.local ein
+# Add Supabase keys to .env.local
 
-# Development Server starten
+# Start development server
 npm run dev
 ```
 
-App läuft auf: [http://localhost:3000](http://localhost:3000)
+App runs on: [http://localhost:3000](http://localhost:3000)
 
 ### Build & Production
 ```bash
-# Production Build
+# Production build
 npm run build
 
-# Production Server lokal testen
+# Test production server locally
 npm run start
 ```
 
 ---
 
-## 🧪 Testdaten
+## 🧪 Test Data
 
-Nach der Registrierung kannst du Test-Tasks erstellen:
+After registration, you can create test tasks:
 
-1. **Sign Up** mit beliebiger Email (z.B. `test@example.com`)
-2. Email verifizieren (Check Inbox)
-3. **Login** mit denselben Credentials
-4. **"Create Task"** Button klicken
-5. Task erstellen und per Drag & Drop verschieben
+1. **Sign up** with any email (e.g., `test@example.com`)
+2. Verify email (check inbox)
+3. **Login** with same credentials
+4. Click **"Create Task"** button
+5. Create task and move via drag & drop
 
 ---
 
 ## 📈 Performance
 
-- **Build-Zeit:** ~30s (Vercel)
-- **Initial Load:** < 2s (First Contentful Paint)
-- **Drag & Drop:** 3px Aktivierung für sofortiges Feedback
-- **Global CDN:** Schnelle Ladezeiten weltweit
+- **Build time:** ~30s (Vercel)
+- **Initial load:** < 2s (First Contentful Paint)
+- **Drag & drop:** 3px activation for instant feedback
+- **Global CDN:** Fast load times worldwide
 
 ---
 
-## 🔮 Zukünftige Erweiterungen
+## 🔮 Future Enhancements
 
-Mögliche Features für zukünftige Versionen:
-- 🔍 Such- und Filter-Funktionalität
-- 🏷️ Tags/Labels für Tasks
-- 📅 Kalenderansicht
-- 🤝 Team-Collaboration (Shared Tasks)
-- 📊 Analytics Dashboard
-- 🌙 Dark Mode Toggle
+Possible features for future versions:
+- 🔍 Search and filter functionality
+- 🏷️ Tags/labels for tasks
+- 📅 Calendar view
+- 🤝 Team collaboration (shared tasks)
+- 📊 Analytics dashboard
+- 🌙 Dark mode toggle
 - 📱 Progressive Web App (PWA)
 
 ---
 
-## 📝 Lizenz
+## 📝 License
 
-MIT License - Siehe [LICENSE](LICENSE) Datei
+MIT License - See [LICENSE](LICENSE) file
 
 ---
 
-## 👤 Entwickler
+## 👤 Developer
 
 **Andre M.**  
 GitHub: [@AM-Automation](https://github.com/AM-Automation)
@@ -232,9 +232,9 @@ GitHub: [@AM-Automation](https://github.com/AM-Automation)
 
 ## 📞 Support
 
-Bei Fragen oder Issues:
+For questions or issues:
 - GitHub Issues: [Task-Manager-Web-App/issues](https://github.com/AM-Automation/Task-Manager-Web-App/issues)
-- Email: [Kontakt über GitHub](https://github.com/AM-Automation)
+- Email: [Contact via GitHub](https://github.com/AM-Automation)
 
 ---
 
